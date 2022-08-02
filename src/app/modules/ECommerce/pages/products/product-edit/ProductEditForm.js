@@ -4,7 +4,7 @@
 // https://hackernoon.com/react-form-validation-with-formik-and-yup-8b76bda62e10
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+// import * as Yup from "yup";
 import { Input } from "../../../../../../_metronic/_partials/controls";
 // import {
 //   AVAILABLE_COLORS,
@@ -14,30 +14,30 @@ import { Input } from "../../../../../../_metronic/_partials/controls";
 // } from "../ProductsUIHelpers";
 
 // Validation schema
-const ProductEditSchema = Yup.object().shape({
-  model: Yup.string()
-    .min(2, "Minimum 2 symbols")
-    .max(50, "Maximum 50 symbols")
-    .required("Model is required"),
-  manufacture: Yup.string()
-    .min(2, "Minimum 2 symbols")
-    .max(50, "Maximum 50 symbols")
-    .required("Manufacture is required"),
-  modelYear: Yup.number()
-    .min(1950, "1950 is minimum")
-    .max(2020, "2020 is maximum")
-    .required("Model year is required"),
-  mileage: Yup.number()
-    .min(0, "0 is minimum")
-    .max(1000000, "1000000 is maximum")
-    .required("Mileage is required"),
-  color: Yup.string().required("Color is required"),
-  price: Yup.number()
-    .min(1, "$1 is minimum")
-    .max(1000000, "$1000000 is maximum")
-    .required("Price is required"),
-  VINCode: Yup.string().required("VINCode is required"),
-});
+// const ProductEditSchema = Yup.object().shape({
+//   model: Yup.string()
+//     .min(2, "Minimum 2 symbols")
+//     .max(50, "Maximum 50 symbols")
+//     .required("Model is required"),
+//   manufacture: Yup.string()
+//     .min(2, "Minimum 2 symbols")
+//     .max(50, "Maximum 50 symbols")
+//     .required("Manufacture is required"),
+//   modelYear: Yup.number()
+//     .min(1950, "1950 is minimum")
+//     .max(2020, "2020 is maximum")
+//     .required("Model year is required"),
+//   mileage: Yup.number()
+//     .min(0, "0 is minimum")
+//     .max(1000000, "1000000 is maximum")
+//     .required("Mileage is required"),
+//   color: Yup.string().required("Color is required"),
+//   price: Yup.number()
+//     .min(1, "$1 is minimum")
+//     .max(1000000, "$1000000 is maximum")
+//     .required("Price is required"),
+//   VINCode: Yup.string().required("VINCode is required"),
+// });
 
 export function ProductEditForm({
   product,

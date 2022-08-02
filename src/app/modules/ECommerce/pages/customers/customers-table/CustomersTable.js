@@ -22,7 +22,7 @@ import * as columnFormatters from "./column-formatters";
 import { useCustomersUIContext } from "../CustomersUIContext";
 
 export function CustomersTable() {
-  const {isAuthorized, user, token} = useSelector(
+  const {user} = useSelector(
     ({auth}) => ({
         isAuthorized: auth.user != null,
         user:auth.user,
@@ -48,7 +48,7 @@ export function CustomersTable() {
     (state) => ({ currentState: state.customers }),
     shallowEqual
   );
-  const { totalCount, entities, listLoading } = currentState;
+  const { entities } = currentState;
 
   // Customers Redux state
   const dispatch = useDispatch();
@@ -140,13 +140,13 @@ export function CustomersTable() {
     },
   ];
   // Table pagination properties
-  const paginationOptions = {
-    custom: true,
-    totalSize: totalCount,
-    sizePerPageList: uiHelpers.sizePerPageList,
-    sizePerPage: customersUIProps.queryParams.pageSize,
-    page: customersUIProps.queryParams.pageNumber,
-  };
+  // const paginationOptions = {
+  //   custom: true,
+  //   totalSize: totalCount,
+  //   sizePerPageList: uiHelpers.sizePerPageList,
+  //   sizePerPage: customersUIProps.queryParams.pageSize,
+  //   page: customersUIProps.queryParams.pageNumber,
+  // };
   return (
     <>
       {/* <PaginationProvider pagination={paginationFactory(paginationOptions)}>

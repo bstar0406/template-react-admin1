@@ -10,7 +10,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import * as actions from "../../../_redux/products/productsActions";
 import * as uiHelpers from "../ProductsUIHelpers";
 import {
-  getSelectRow,
+  // getSelectRow,
   getHandlerTableChange,
   NoRecordsFoundMessage,
   PleaseWaitMessage,
